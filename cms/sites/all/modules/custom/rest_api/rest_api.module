@@ -1,0 +1,73 @@
+<?php
+
+/**
+ * This file implements all the hooks.
+ */
+
+/**
+ * Implement hook_menu(), just to intercept the request for this query_api.
+ */
+
+function rest_api_menu() {
+	$items = array();
+
+	$items['rest/artwork'] = array(
+		'title' => 'REST ARTWORK ENDPOINT',
+		'description' => 'This is a REST API endpoint built for Nail on Wall. Do not mix this up with the SERVICES 3.x REST API, which should be located at "services_rest"',
+		'page callback' => 'rest_api_artwork_process_query',
+		'access callback' => TRUE,
+		'file' => 'rest_api.artwork.process.inc',
+	);
+
+	$items['rest/artist'] = array(
+		'title' => 'REST ARTIST ENDPOINT',
+		'description' => 'This is a REST API endpoint built for Nail on Wall. Do not mix this up with the SERVICES 3.x REST API, which should be located at "services_rest"',
+		'page callback' => 'rest_api_artist_process_query',
+		'access callback' => TRUE,
+		'file' => 'rest_api.artist.process.inc'
+	);
+
+
+	///////////////////////
+	////// SEARCH /////////
+	///////////////////////
+	$items['rest/search'] = array(
+		'title' => 'REST SEARCH ENDPOINT',
+		'description' => 'This is a REST API endpoint built for Nail on Wall. Do not mix this up with the SERVICES 3.x REST API, which should be located at "services_rest"',
+		'page callback' => 'rest_api_search_process_query',
+		'access callback' => TRUE,
+		'file' => 'rest_api.search.process.inc',
+	);
+
+
+
+
+
+	///////////////////////
+	/////// MOBILE ////////
+	///////////////////////
+	$items['rest/mobile'] = array(
+		'title' => 'REST MOBILE ENDPOINT',
+		'description' => 'A REST endpoint for dealing with mobile requests.',
+		'page callback' => 'rest_api_mobile_process_query',
+		'access callback' => TRUE,
+		'file' => 'rest_api.mobile.process.inc',
+	);
+
+
+
+	///////////////////////
+	/////// CONTACT ///////
+	///////////////////////
+	$items['rest/contact'] = array(
+		'title' => 'REST CONTACT ENDPOINT',
+		'description' => 'A REST endpoint for receiving emails',
+		'page callback' => 'rest_api_contact_process_query',
+		'access callback' => TRUE,
+		'file' => 'rest_api.contact.process.inc',
+	);
+
+
+
+	return $items;
+}

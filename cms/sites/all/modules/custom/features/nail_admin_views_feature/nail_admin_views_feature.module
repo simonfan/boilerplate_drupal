@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the nail_admin_views_feature feature.
+ */
+
+include_once 'nail_admin_views_feature.features.inc';

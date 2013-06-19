@@ -1,0 +1,19 @@
+/* main nav styles */
+@import url('mainnav.css');
+
+body {
+
+}
+
+#pages {
+	list-style: none;
+	padding: 0 0;
+	margin: 40px 0 0 0;
+}
+
+#pages li {
+	opacity: 0;
+
+	padding: 0 0;
+	margin: 0 0;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "taskrunner",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "lastest",
+    "underscore": "latest",
+    "backbone": "latest",
+    "requirejs": "latest",
+    "buildable": "simonfan/buildable",
+    "_.mixins": "simonfan/_.mixins",
+    "qunit": "latest"
+  },
+  "main": "component.js",
+  "gitHead": "260d8953118c2302998a942609262f74c769dde6",
+  "readme": "This is a component boilerplate. Add your description here!",
+  "readmeFilename": "README.md",
+  "_id": "taskrunner@0.0.1",
+  "description": "This is a component boilerplate. Add your description here!",
+  "commit": "260d8953118c2302998a942609262f74c769dde6",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonfan/taskrunner.git"
+  }
+}

@@ -1,0 +1,11 @@
+name = nail_admin_views_feature
+description = Sets up the administrative views for nail on wall.
+core = 7.x
+package = Nail on Wall
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = artists
+features[views_view][] = artworks
+features[views_view][] = search_api_search
+features_exclude[dependencies][ctools] = ctools

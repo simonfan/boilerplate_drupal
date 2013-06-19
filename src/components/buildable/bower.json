@@ -1,0 +1,21 @@
+{
+  "name": "buildable",
+  "version": "0.0.0",
+  "dependencies": {
+    "underscore": "latest",
+    "requirejs": "latest",
+    "qunit": "latest",
+    "_.mixins": "https://github.com/simonfan/_.mixins.git"
+  },
+  "main": "buildable.js",
+  "gitHead": "2bd427b90739cb41a3e59cf60445542fb6c4e152",
+  "readme": "This is a component boilerplate. Add your description here!",
+  "readmeFilename": "README.md",
+  "_id": "buildable@0.0.1",
+  "description": "This is a component boilerplate. Add your description here!",
+  "commit": "2bd427b90739cb41a3e59cf60445542fb6c4e152",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonfan/buildable.git"
+  }
+}

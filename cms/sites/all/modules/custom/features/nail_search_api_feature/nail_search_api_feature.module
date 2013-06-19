@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the nail_search_api_feature feature.
+ */
+
+include_once 'nail_search_api_feature.features.inc';

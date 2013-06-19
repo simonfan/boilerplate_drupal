@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the nail_services_3_feature feature.
+ */
+
+include_once 'nail_services_3_feature.features.inc';

@@ -1,0 +1,9 @@
+name = Entity study
+description = Study on Entity API
+package = Learning
+core = 7.x
+
+files[] = entity_study.module
+files[] = entity_study.extended_wrapper.inc
+
+dependencies[] = entity

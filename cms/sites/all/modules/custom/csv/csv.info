@@ -1,0 +1,9 @@
+name = Drupal CSV
+description = Easily integrate your CSV data into Drupal.
+package = Nail on Wall
+core = 7.x
+
+files[] = csv.module
+files[] = csv.common.inc
+
+dependencies[] = entity

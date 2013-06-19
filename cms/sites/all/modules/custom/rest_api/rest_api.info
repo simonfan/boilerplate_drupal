@@ -1,0 +1,11 @@
+name = REST query API
+description = Exposes core class EntityFieldQuery.
+package = Nail on Wall
+core = 7.x
+
+files[] = rest_api.module
+files[] = rest_api.artworkquery.inc
+files[] = rest_api.mail.inc
+
+;dependencies[] = 
+

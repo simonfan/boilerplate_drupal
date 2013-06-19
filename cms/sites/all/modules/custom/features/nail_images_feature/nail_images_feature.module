@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the nail_images_feature feature.
+ */
+
+include_once 'nail_images_feature.features.inc';

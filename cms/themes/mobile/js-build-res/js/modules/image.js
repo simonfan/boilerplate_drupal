@@ -1,0 +1,1 @@
+define(["jquery"],function(e){var t=function(t){var n=e('<img src="'+t.src+'" />');return n.data(t.data).load(function(){e(this).fadeIn(400,function(){e(this).css("display","block")})}),n};return t});

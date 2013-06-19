@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the nail_content_types_feature feature.
+ */
+
+include_once 'nail_content_types_feature.features.inc';

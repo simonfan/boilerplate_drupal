@@ -1,0 +1,17 @@
+{
+  "name": "Boilerplate project",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "lastest",
+    "underscore": "latest",
+    "backbone": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "buildable": "simonfan/buildable",
+    "_.mixins": "simonfan/_.mixins",
+    "taskrunner": "simonfan/taskrunner",
+    "handlebars": "~1.0.0",
+    "transitions": "simonfan/transitions",
+    "nav": "simonfan/nav"
+  }
+}

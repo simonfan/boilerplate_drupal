@@ -1,0 +1,8 @@
+name = nail_images_feature
+description = Sets up the image sizes.
+core = 7.x
+package = Nail on Wall
+dependencies[] = image
+features[features_api][] = api:1
+features[image][] = tile100
+features[image][] = tile200

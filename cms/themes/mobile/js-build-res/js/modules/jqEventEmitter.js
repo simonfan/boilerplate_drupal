@@ -1,0 +1,1 @@
+define(["jquery"],function(e){e.eventEmitter={_JQInit:function(){this._JQ=e(this)},emit:function(e,t){!this._JQ&&this._JQInit(),this._JQ.trigger(e,t)},once:function(e,t){!this._JQ&&this._JQInit(),this._JQ.one(e,t)},on:function(e,t){!this._JQ&&this._JQInit(),this._JQ.bind(e,t)},off:function(e,t){!this._JQ&&this._JQInit(),this._JQ.unbind(e,t)}}});

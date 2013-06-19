@@ -1,0 +1,27 @@
+# ignore any 'internal folders', defined by '__' prefix:
+__*/
+
+# DRUPAL .gitignore:
+
+# Ignore configuration files that may contain sensitive information.
+cms/sites/*/*settings*.php
+
+# Ignore paths that contain generated content.
+cms/cache/
+cms/files/
+cms/sites/*/files
+cms/sites/*/private
+
+# Ignore default text files
+cms/.htaccess
+cms/robots.txt
+cms/CHANGELOG.txt
+cms/COPYRIGHT.txt
+cms/INSTALL*.txt
+cms/LICENSE.txt
+cms/MAINTAINERS.txt
+cms/UPGRADE.txt
+cms/README.txt
+cms/sites/all/README.txt
+cms/sites/all/modules/README.txt
+cms/sites/all/themes/README.txt

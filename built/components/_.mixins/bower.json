@@ -1,0 +1,20 @@
+{
+  "name": "_.mixins",
+  "version": "0.0.0",
+  "dependencies": {
+    "underscore": "latest",
+    "requirejs": "latest",
+    "qunit": "latest"
+  },
+  "main": "component.js",
+  "gitHead": "e6ceeccc1305335a4f23a3afa9760a7f5bac6d28",
+  "readme": "This is a component boilerplate. Add your description here!",
+  "readmeFilename": "README.md",
+  "_id": "_.mixins@0.0.1",
+  "description": "This is a component boilerplate. Add your description here!",
+  "commit": "e6ceeccc1305335a4f23a3afa9760a7f5bac6d28",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonfan/_.mixins.git"
+  }
+}

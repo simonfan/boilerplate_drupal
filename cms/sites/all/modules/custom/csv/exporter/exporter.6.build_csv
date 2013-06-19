@@ -1,0 +1,98 @@
+<?php
+
+$path_to_mod = drupal_get_path('module', 'csv');
+// always require common.inc
+require_once($path_to_mod .'/exporter/exporter.CSVExporterEntityMetadataWrapper.inc');
+
+
+
+
+function csv_exporter_build_csv($form, &$form_state, $form_values) {
+	///////////////////////////////////////////////
+	/////// FIRST STEP: get list of entities //////
+	///////////////////////////////////////////////
+	$query = new EntityFieldQuery();
+
+	$query->entityCondition('entity_type', $form_values['entity_type'])
+		->entityCondition('bundle', $form_values['entity_bundle']);
+
+	$res = $query->execute();
+	$entity_previews = $res[ $form_values['entity_type'] ];
+
+
+	///////////////////////////////////////////
+	///// SECOND STEP: build column names /////
+	///////////////////////////////////////////
+	// first build the column names for the csv file
+	$column_names = array();
+
+	foreach ($form_values['field_settings'] AS $field => $requested_data_names) {
+		// first remove falsey values from the requested_data_names array
+		$requested_data_names = array_filter($requested_data_names);
+
+		foreach ($requested_data_names as $k => $data_name) {
+
+			$suffix = $data_name == 'default' ? '' : ':'.$data_name;
+			$col_name = $field . $suffix;
+
+			array_push($column_names, $col_name);
+		}
+	}
+
+
+	////////////////////////////////////////////
+	/////// THIRD STEP: build the file /////////
+	////////////////////////////////////////////
+	$file_n = $form_values['file_dir'] .'/'. $form_values['file_name'];
+	$file_handle = fopen($file_n, 'w') OR die('cannot open file');
+
+	// write the first line, which should be the column names
+	fputcsv($file_handle, $column_names);
+
+	//////////////////////////////////////////////////////////////
+	///// FOURTH STEP: for each entity, get the requested data ///
+	//////////////////////////////////////////////////////////////
+	$entity_type = $form_values['entity_type'];
+
+	foreach ($entity_previews as $entity_id => $entity_preview) {
+		// load the full entity.
+		$entity = entity_load( $entity_type, array($entity_id) );
+		$entity = $entity[$entity_id];
+
+		// wrap it with a metadata wrapper
+		$wrapper = new CSVExporterEntityMetadataWrapper($entity_type, $entity);
+
+		$data = $wrapper->export($column_names);
+
+		$data = array_map('csv_common_simplify_data', $data);
+
+		fputcsv($file_handle, $data);
+	}
+
+	fclose($file_handle);
+
+
+	//$variables: An associative array containing the keys 'text', 'path', and 'options'. See the l() function for information about these variables.
+
+	$link_to_file = l(
+		$form_values['file_name'],
+		$form_values['file_dir'] . '/' .$form_values['file_name']
+	);
+
+	$form = array();
+
+	$form['results'] = array(
+		'#type' => 'fieldset',
+		'#title' => 'Your file:',
+	);
+
+	$form['results']['resulting_file'] = array(
+		'#type' => 'hidden',
+		'#prefix' => $link_to_file
+	);
+
+	return $form;
+}
+
+
+

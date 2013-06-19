@@ -1,0 +1,197 @@
+/*
+ * this is a "hack": let the bg be black, so that the html is hidden before the jquery
+ * mobile renders its styles..;
+ */
+body {
+	background-color: #000;
+}
+
+
+
+/**
+ * Page
+ */
+.ui-page {
+	background-color: #000 !important;
+
+	background-image: none !important;
+}
+
+
+
+
+/**
+ * Header
+ */
+#header {
+	/* Guys at photoswipe defined their stuff with z-index of 1000... */
+	z-index: 10000;
+}
+
+
+
+
+
+
+
+
+
+/**
+ * jquery.mobile css overrides
+ */
+.ui-content {
+	padding: 0 0 0 0;
+
+ 	background-color: #000;
+
+ 	min-height: 100%;
+ 	width: 100%;
+}
+	/**
+	 * Style for the tiles div
+	 */
+	#tiles {
+		margin: 0 0 0 0;
+		padding: 0 0 0 0;
+
+		width: 100%;
+		min-height: 100%;
+
+		list-style: none;
+	}
+
+		#tiles li {
+			/*
+			width: 100px;
+			height: 100px;
+			*/
+
+			overflow: hidden;
+
+			margin: 2px 2px;
+
+			float: left;
+
+			position: relative;
+		}
+
+		#tiles li img {
+			position: absolute;
+
+			top: 0;
+			left: 0;
+
+			display: none;
+
+			height: 100%;
+		}
+
+
+
+
+
+
+
+
+/**
+ * Footer
+ */
+#footer {
+	background-color: rgba(0,0,0, 0.5);
+	background-image: none;
+
+	border: none;
+}
+
+	#footer-toolbar-wrapper {
+		margin-left: 10px;
+		margin-bottom: 10px;
+	}
+
+
+	#footer-toolbar-wrapper label {
+		margin: 0 0 !important;
+	}
+
+
+	/* SELECT */
+
+
+	/* FLIP SWITCH */
+	#footer-toolbar-wrapper .ui-slider-switch,
+	.ui-btn,
+	#footer-toolbar-wrapper .ui-btn-text {
+		width: 12em;
+		font-size: 1.2em;
+
+		margin: 0 0;
+	};
+
+
+
+
+	/* TOGGLE SWITCH */
+	#onwall-switch {
+		margin-left: auto;
+		margin-right: auto;
+
+		margin-top: 0;
+		margin-bottom: 0;
+
+		padding: 0 0 0 0;
+		list-style: none;
+	}
+
+		#onwall-switch li {
+			float: left;
+		}
+
+			#onwall-switch li label {
+				display: inline-block;
+				height: 32px;
+				line-height: 32px;
+
+				margin: .5em 1em;
+
+				font-size: 1.4em;
+			}
+
+
+
+
+
+
+
+
+/**
+ * Styles for the photoswipe footer. We are building our info bar over there.
+ */
+.ps-toolbar-close {
+	float: left;
+}
+
+
+.artwork-info-wrapper {
+	height: 50px;
+	line-height: 50px;
+
+	margin-left: 50px;
+	margin-right: 50px;
+
+	text-align: center;
+}
+
+.artwork-info-spinner {
+	float: right;
+	height: 38px;
+	width: 38px;
+
+	padding-top: 12px;
+	padding-left: 12px;
+
+	opacity: 0;
+}
+
+	.artwork-info-spinner img {
+		height: 20px;
+	}

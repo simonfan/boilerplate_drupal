@@ -1,0 +1,1 @@
+This document is used to catalog all Bugs, their solutions, the method of reproducing them in the code and stuff.

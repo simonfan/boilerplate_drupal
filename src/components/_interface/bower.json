@@ -1,0 +1,20 @@
+{
+  "name": "_interface",
+  "version": "0.0.0",
+  "dependencies": {
+    "underscore": "latest",
+    "requirejs": "latest",
+    "qunit": "latest"
+  },
+  "main": "_.interface.js",
+  "gitHead": "79cf357ebf4a3c55cee50bf026b15a76bc6a8a4a",
+  "readme": "_.interface mixin.",
+  "readmeFilename": "README.md",
+  "_id": "_.interface@0.0.1",
+  "description": "_.interface mixin.",
+  "commit": "79cf357ebf4a3c55cee50bf026b15a76bc6a8a4a",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonfan/_interface.git"
+  }
+}

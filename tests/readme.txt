@@ -1,0 +1,3 @@
+This directory's child dirs contain files that set up the unit tests and the demo for each tested module/view/app-element.
+
+The 'lib' dir holds all libraries that are used within the tests dir. I have opted for a different 'lib' dir than the app 'lib' dir because this way we can have a clear separation between production and test logic. This, in the future might prove not so useful, as we will have to maintain libraries up to date, but for now it makes sense.
